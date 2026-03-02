@@ -10,6 +10,18 @@
 
 ---
 
+## TLDR
+
+**Replication status**: All main findings replicate successfully. Coefficient magnitudes, SEs, and significance levels are consistent across all tables and figures.
+
+**Key findings confirmed**: Female business owners earn ~GHS 889 less/month (-30% of mean), have smaller business networks, and the networking index predicts profits (610 GHS per SD). The gender profit gap is robust to winsorizing, log transforms, and alternative SE specifications.
+
+**Main concerns**: (1) Adding product fixed effects reduces the female coefficient by ~40% and renders it insignificant in the kitchen-sink model, suggesting much of the gender gap operates through product selection. (2) Quantile regression shows no gender gap at the 10th-25th percentiles — the gap is entirely concentrated at the median and above, consistent with a "glass ceiling" interpretation.
+
+**Code bug found**: The published `output.do` references a variable `profit` that is never created in `clean.do` (which creates `profits_lastmonth` instead). The code cannot run as-is without modification. This is a packaging oversight, not an analytical error — it does not affect any published results.
+
+---
+
 ## 1. Introduction and Paper Summary
 
 This paper examines gender disparities in business networks among 1,487 agribusiness owners in Ghana. The key findings are:
